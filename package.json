@@ -1,0 +1,10 @@
+{
+	"name": "ultra-lite-engine",
+	"description": "an ultra-lite engine for roleplaying games",
+	"version": "0.8",
+	"dependencies": {},
+	"devDependencies": {
+		"mocha": "~1.21.4",
+		"chai": "~1.9.1"
+	}
+}
