@@ -1,8 +1,11 @@
 var ultralite = require('../lib/ultralite.js');
+var  should = require('chai').should();
 
 describe('reaction', function() {
 	describe('roll', function() {
-		it("must return an number between 3 and 18 inclusive")
+		it("must return an number between 3 and 18 inclusive", function() {
+			ultralite.reaction.roll().should.be.within(3,18);
+		});
 	});
 
 	describe('reaction roll', function() {
