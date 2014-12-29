@@ -55,70 +55,120 @@ describe('levels', function() {
 	});
 
 	describe('dexterity (DX) levels', function() {
-		it("should have a base roll");
+		it('should have five levels: Clumsy, Normal, Agile, Very Agile, and Extreme', function() {
+			levels.DX.should.have.keys('clumsy', 'normal', 'agile', 'veryAgile', 'extreme');
+		});
+
+		it("should have a base roll", function() {
+			Object.keys(levels.DX).forEach(function (element) {
+				levels.DX[element].should.have.ownProperty('baseRoll');
+			});
+		});
 
 		describe('Clumsy', function() {
-			it("should have a base roll of 8");
+			it("should have a base roll of 8", function() {
+				levels.DX.clumsy.baseRoll.should.equal(8);
+			});
 		});
 
 		describe('Normal', function() {
-			it("should have a base roll of 10");
+			it("should have a base roll of 10", function() {
+				levels.DX.normal.baseRoll.should.equal(10);
+			});
 		});
 
 		describe('Agile', function() {
-			it("should have a base roll of 12");
+			it("should have a base roll of 12", function() {
+				levels.DX.agile.baseRoll.should.equal(12);
+			});
 		});
 
 		describe('Very Agile', function() {
-			it("should have a base roll of 14");
+			it("should have a base roll of 14", function() {
+				levels.DX.veryAgile.baseRoll.should.equal(14);
+			});
 		});
 
 		describe('Extreme', function() {
-			it("should have a base roll of 16");
+			it("should have a base roll of 16", function() {
+				levels.DX.extreme.baseRoll.should.equal(16);
+			});
 		});
 	});
 
 	describe('intelligence (IQ) levels', function() {
-		it("should have a base roll");
+		it('should have five levels: Dull, Normal, Smart, Very Smart, and Genius', function() {
+			levels.IQ.should.have.keys('dull', 'normal', 'smart', 'verySmart', 'genius');
+		});
 
+		it("should have a base roll", function() {
+			Object.keys(levels.IQ).forEach(function (element) {
+				levels.IQ[element].should.have.ownProperty('baseRoll');
+			});
+		});
 		describe('Dull', function() {
-			it("should have a base roll of 8");
+			it("should have a base roll of 8", function() {
+				levels.IQ.dull.baseRoll.should.equal(8);
+			});
 		});
 
 		describe('Normal', function() {
-			it("should have a base roll of 10");
+			it("should have a base roll of 10", function() {
+				levels.IQ.normal.baseRoll.should.equal(10);
+			});
 		});
 
 		describe('Smart', function() {
-			it("should have a base roll of 12");
+			it("should have a base roll of 12", function() {
+				levels.IQ.smart.baseRoll.should.equal(12);
+			});
 		});
 
 		describe('Very Smart', function() {
-			it("should have a base roll of 14");
+			it("should have a base roll of 14", function() {
+				levels.IQ.verySmart.baseRoll.should.equal(14);
+			});
 		});
 
 		describe('Genuis', function() {
-			it("should have a base roll of 16");
+			it("should have a base roll of 16", function() {
+				levels.IQ.genius.baseRoll.should.equal(16);
+			});
 		});
 	});
 
 	describe('health (HT) levels', function() {
-		it("should have a base roll");
+		it('should have four levels: Sickly, Normal, Hardy, and Very Hardy', function() {
+			levels.HT.should.have.keys('sickly', 'normal', 'hardy', 'veryHardy');
+		});
 
+		it("should have a base roll", function() {
+			Object.keys(levels.HT).forEach(function (element) {
+				levels.HT[element].should.have.ownProperty('baseRoll');
+			});
+		});
 		describe('Sickly', function() {
-			it("should have a base roll of 8");
+			it("should have a base roll of 8", function() {
+				levels.HT.sickly.baseRoll.should.equal(8);
+			});
 		});
 
 		describe('Normal', function() {
-			it("should have a base roll of 10");
+			it("should have a base roll of 10", function() {
+				levels.HT.normal.baseRoll.should.equal(10);
+			});
 		});
 
 		describe('Hardy', function() {
-			it("should have a base roll of 14");
+			it("should have a base roll of 14", function() {
+				levels.HT.hardy.baseRoll.should.equal(14);
+			});
 		});
 
 		describe('Vary Hardy', function() {
-			it("should have a base roll of 18");
+			it("should have a base roll of 18", function() {
+				levels.HT.veryHardy.baseRoll.should.equal(18);
+			});
 		});
 	});
 });
