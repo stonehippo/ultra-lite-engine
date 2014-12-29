@@ -34,23 +34,39 @@ describe('levels', function() {
 		});
 
 		describe('Weak', function() {
-			it("should have 8 HP");
-			it("should have 1d6/2 basic damage");
+			it("should have 8 HP", function() {
+				levels.ST.weak.hitPoints.should.equal(8);
+			});
+			it("should have 1d6/2 basic damage", function() {
+				levels.ST.weak.basicDamage.should.equal("1d6/2");
+			});
 		});
 
 		describe('Normal', function() {
-			it("should have 10 HP");
-			it("should have 1d6 basic damage");
+			it("should have 10 HP", function() {
+				levels.ST.normal.hitPoints.should.equal(10);
+			});
+			it("should have 1d6 basic damage", function() {
+				levels.ST.normal.basicDamage.should.equal("1d6");
+			});
 		});
 
 		describe('Strong', function() {
-			it("should have 14 HP");
-			it("should have 2d6 basic damage");
+			it("should have 14 HP", function() {
+				levels.ST.strong.hitPoints.should.equal(14);
+			});
+			it("should have 2d6 basic damage", function() {
+				levels.ST.strong.basicDamage.should.equal("2d6");
+			});
 		});
 
 		describe('Very Strong', function() {
-			it("should have 18 HP");
-			it("should have 3d6 basic damage");
+			it("should have 18 HP", function() {
+				levels.ST.veryStrong.hitPoints.should.equal(18);
+			});
+			it("should have 3d6 basic damage", function() {
+				levels.ST.veryStrong.basicDamage.should.equal("3d6");
+			});
 		});
 	});
 
