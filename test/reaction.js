@@ -1,6 +1,3 @@
-var ultralite = require('../lib/ultralite.js');
-var  should = require('chai').should();
-
 describe('reaction', function() {
 	describe('roll', function() {
 		it("must return an number between 3 and 18 inclusive", function() {

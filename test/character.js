@@ -1,8 +1,11 @@
-var ultralite = require('../lib/ultralite.js');
-
 describe('character', function() {
 	var character = ultralite.character.create({
 		name: "Jane Doe"
+	})
+
+	it('should be able to create a new character', function() {
+		ultralite.character.should.exist
+		ultralite.character.should.respondTo('create')
 	})
 
 	describe('basic information', function() {
@@ -17,6 +20,7 @@ describe('character', function() {
 			character.notes.should.be.a('string')
 		})
 	});
+
 	describe('attributes', function() {
 		it("must have ST, DX, IQ, and HT attributes", function() {
 			character.should.have.ownProperty("attributes")

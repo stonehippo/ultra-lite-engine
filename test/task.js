@@ -1,5 +1,3 @@
-var ultralite = require('../lib/ultralite.js');
-
 describe ('task', function() {
 	describe('roll', function() {
 		it("should return an number between 3 and 18 inclusive", function() {

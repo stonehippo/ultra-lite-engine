@@ -1,5 +1,3 @@
-var ultralite = require('../lib/ultralite.js');
-
 describe('non-player character', function() {
 	describe('reaction', function() {
 		it("must have a reaction level")

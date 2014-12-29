@@ -1,10 +1,17 @@
 {
-	"name": "ultra-lite-engine",
-	"description": "an ultra-lite engine for roleplaying games",
-	"version": "0.8.0",
-	"dependencies": {},
-	"devDependencies": {
-		"mocha": "*",
-		"chai": "*"
-	}
+  "name": "ultra-lite-engine",
+  "description": "an ultra-lite engine for roleplaying games",
+  "version": "0.8.0",
+  "dependencies": {},
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "chai": "*",
+    "mocha": "*"
+  },
+  "config": {
+  	"blanket": {
+  		"pattern": "lib/",
+  		"data-cover-never": "node_modules"
+  	}
+  }
 }

@@ -1,5 +1,3 @@
-var ultralite = require("../lib/ultralite.js");
-
 describe('levels', function() {
 	var levels = ultralite.levels
 
