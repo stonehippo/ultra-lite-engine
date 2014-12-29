@@ -26,10 +26,10 @@ describe('character', function() {
 			character.attributes.should.have.ownProperty("HT")
 		})
 		it("has Normal attribute levels by default", function() {
-			character.attributes.ST.should.equal(ultralite.levels.st.normal)
-			character.attributes.DX.should.equal(ultralite.levels.dx.normal)
-			character.attributes.IQ.should.equal(ultralite.levels.iq.normal)
-			character.attributes.HT.should.equal(ultralite.levels.ht.normal)
+			character.attributes.ST.should.equal(ultralite.levels.ST.normal)
+			character.attributes.DX.should.equal(ultralite.levels.DX.normal)
+			character.attributes.IQ.should.equal(ultralite.levels.IQ.normal)
+			character.attributes.HT.should.equal(ultralite.levels.HT.normal)
 		})
 		describe('validation', function() {
 			it("must only allow attributes to be set to defined levels")

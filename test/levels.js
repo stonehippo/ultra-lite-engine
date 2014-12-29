@@ -1,16 +1,39 @@
 var ultralite = require("../lib/ultralite.js");
 
 describe('levels', function() {
-	var level = ultralite.levels
+	var levels = ultralite.levels
 
-	it('should have strength levels')
-	it('shold have dexterity levels')
-	it('should have intelligence levels')
-	it('should have health levels')
+	it('should really exist', function() {
+		levels.should.exist
+	})
+
+	it('should have strength levels', function() {
+		levels.should.have.ownProperty('ST')
+	})
+	it('shold have dexterity levels', function() {
+		levels.should.have.ownProperty('DX')
+	})
+	it('should have intelligence levels', function() {
+		levels.should.have.ownProperty('IQ')
+	})
+	it('should have health levels', function() {
+		levels.should.have.ownProperty('HT')
+	})
 
 	describe('strength (ST) levels', function() {
-		it('should have hit points (HP')
-		it('should have basic damage')
+		it('should have four levels: Weak, Normal, Strong and Very Strong', function() {
+			levels.ST.should.have.keys('weak', 'normal', 'strong', 'veryStrong')
+		})
+		it('all ST levels should have hit points (HP)', function() {
+			Object.keys(levels.ST).forEach(function (element) {
+				levels.ST[element].should.have.ownProperty('hitPoints')
+			})
+		})
+		it('all ST level should have basic damage', function() {
+			Object.keys(levels.ST).forEach(function (element) {
+				levels.ST[element].should.have.ownProperty('basicDamage')
+			})
+		})
 
 		describe('Weak', function() {
 			it("should have 8 HP")
