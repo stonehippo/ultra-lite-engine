@@ -1,7 +1,10 @@
 describe('reaction', function() {
 	describe('roll', function() {
 		it("must return an number between 3 and 18 inclusive", function() {
-			ultralite.reaction.roll().should.be.within(3,18);
+			// roll the dice several times to be sure that things are working
+			for(var i = 1000; i--; ) {
+				ultralite.reaction.roll().should.be.within(3,18);
+			}
 		});
 	});
 
