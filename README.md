@@ -22,4 +22,4 @@ $ mocha --require blanket -R html-cov > test_coverage.html
 
 ## License
 
-The code for Ultra Lite Engine is available for everyone to use as they see fit thanks to the MIT License (see the LICENSE file). However, Ultra Light Engine is based on the GURP Ultra-Lite, which is copyright Steve Jackson Games. I recommend that you get a license from them before using Ultra Light Engine in anything you're going to publish.
+The code for Ultra Lite Engine is available for everyone to use as they see fit thanks to the MIT License (see the LICENSE file). However, Ultra Light Engine is based on the GURP Ultra-Lite rules, which are copyright Steve Jackson Games. I recommend that you get a license from them before using Ultra Light Engine in anything you're going to publish.
