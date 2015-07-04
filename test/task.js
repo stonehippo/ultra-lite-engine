@@ -74,5 +74,60 @@ describe ('task', function() {
 			task.skill.should.equal("Knight");
 			task.modifier.should.equal(-6);
 		});
+		it("must correctly resolve a task with a positive modifier", function()
+		{
+			var stub = sinon.stub(ultralite.task, "roll").returns(11);
+			// the task is easier that normal, so a roll of 11 should pass compared
+			// to the default baseRoll of 10
+			var task = ultralite.task.create({"modifier": 2});
+			task.resolve();
+			task.roll.should.equal(11);
+			task.status.should.equal(ultralite.task.status.success);
+			stub.restore();
+		});
+		it("must correctly resolve a task with a negative modifier", function()
+		{
+			var stub = sinon.stub(ultralite.task, "roll").returns(10);
+			// the task is harder that normal, so a roll of 10 should should with
+			// the default basicDoll of 10
+			var task = ultralite.task.create({"modifier": -2});
+			task.resolve();
+			task.roll.should.equal(10);
+			task.status.should.equal(ultralite.task.status.failure);
+			stub.restore();
+		});
+		it("must correctly resolve a task with a positive modifier and a skill", function()
+		{
+			var stub = sinon.stub(ultralite.task, "roll").returns(6);
+			// the task is easier that normal, but also requires a skill
+			// this means that we expect it to pass on 10 + 2 - 6 = 6
+			var task = ultralite.task.create({"modifier": 2, "skill": "Knight"});
+			task.resolve();
+			task.roll.should.equal(6);
+			task.status.should.equal(ultralite.task.status.success);
+			stub.restore();
+			// likewise we expect the task to fail on a roll of 7 or more
+			stub = sinon.stub(ultralite.task, "roll").returns(7);
+			task.resolve();
+			task.status.should.equal(ultralite.task.status.failure);
+			stub.restore();
+		});
+		it("must correctly resolve a task with a negative modifier and a skill", function()
+		{
+			var stub = sinon.stub(ultralite.task, "roll").returns(6);
+			// the task is harder that normal, but also requires a skill
+			// this means that we expect it to pass on 10 - 2 - 6 = 2
+			// In other words, will only pass on a criticalSuccess
+			var task = ultralite.task.create({"modifier": -2, "skill": "Knight"});
+			task.resolve();
+			task.roll.should.equal(6);
+			task.status.should.equal(ultralite.task.status.failure);
+			stub.restore();
+			// likewise we expect the task to fail on a roll of 7 or more
+			stub = sinon.stub(ultralite.task, "roll").returns(3);
+			task.resolve();
+			task.status.should.equal(ultralite.task.status.criticalSuccess);
+			stub.restore();
+		});
 	});
 });
