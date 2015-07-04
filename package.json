@@ -6,6 +6,8 @@
   "devDependencies": {
     "blanket": "^1.1.6",
     "chai": "*",
+    "sinon": "*",
+    "sinon-chai": "*",
     "mocha": "*"
   },
   "config": {
