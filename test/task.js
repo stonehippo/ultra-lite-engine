@@ -14,5 +14,5 @@ describe ('task', function() {
 		it("must treat a roll less than or equal to the base roll as a success");
 		it("must treat a roll greater than to the base roll as a failure");
 		it("must add -6 modifier to a task that requires training");
-	});;
+	});
 });

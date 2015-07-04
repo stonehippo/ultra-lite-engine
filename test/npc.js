@@ -4,7 +4,7 @@ describe('non-player character', function() {
 	describe('reaction', function() {
 		it("must have a reaction level", function() {
 			npc.should.respondTo('reaction');
-			npc.reaction().should.be.a('string')
+			npc.reaction().should.be.a('string');
 		});
 	});
 

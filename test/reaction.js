@@ -1,3 +1,7 @@
+var roll = function(val) {
+	return function() {return val;};
+};
+
 describe('reaction', function() {
 	describe('roll', function() {
 		before(function() {
@@ -24,21 +28,21 @@ describe('reaction', function() {
 		});
 		it("must make an 'undecided' NPC 'hostile' on a roll of 3-6", function() {
 			for (var i = 3; i <= 6; i++) {
-				ultralite.reaction.roll = function() {return i};
+				ultralite.reaction.roll = roll(i);
 				var reactionRoll = ultralite.reaction.rollForReaction(npc, {}, ultralite.reaction.roll());
 				npc.reaction().should.equal('hostile');
 			}
 		});
 		it("must keep an 'undecided' NPC 'undecided' on a roll of 7-14", function() {
 			for (var i = 7; i <= 14; i++) {
-				ultralite.reaction.roll = function() {return i};
+				ultralite.reaction.roll = roll(i);
 				var reactionRoll = ultralite.reaction.rollForReaction(npc, {}, ultralite.reaction.roll());
 				npc.reaction().should.equal('undecided');
 			}
 		});
 		it("must make an 'undecided' NPC 'friendly' on a roll of 15-18", function() {
 			for (var i = 15; i <= 18; i++) {
-				ultralite.reaction.roll = function() {return i};
+				ultralite.reaction.roll = roll(i);
 				var reactionRoll = ultralite.reaction.rollForReaction(npc, {}, ultralite.reaction.roll());
 				npc.reaction().should.equal('friendly');
 			}
