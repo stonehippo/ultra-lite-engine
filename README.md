@@ -20,6 +20,14 @@ To see test coverage with Blanket:
 $ mocha --require blanket -R html-cov > test_coverage.html
 ```
 
+# Playing a game
+
+See `example/game.js` for a example of a game session. Tested using Node.js 0.12.*.
+
+```
+$ node example/game.js
+```
+
 ## License
 
 The code for Ultra Lite Engine is available for everyone to use as they see fit thanks to the MIT License (see the LICENSE file). However, Ultra Light Engine is based on the GURP Ultra-Lite rules, which are copyright Steve Jackson Games. I recommend that you get a license from them before using Ultra Lite Engine in anything you're going to publish.
