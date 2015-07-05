@@ -22,11 +22,19 @@ describe('attributes', function() {
 		it('should have four attributes: Weak, Normal, Strong and Very Strong', function() {
 			attributes.ST.should.have.keys('weak', 'normal', 'strong', 'veryStrong');
 		});
+
+		it("should have a base roll", function() {
+			Object.keys(attributes.ST).forEach(function (element) {
+				attributes.ST[element].should.have.ownProperty('baseRoll');
+			});
+		});
+
 		it('all ST attributes should have hit points (HP)', function() {
 			Object.keys(attributes.ST).forEach(function (element) {
 				attributes.ST[element].should.have.ownProperty('hitPoints');
 			});
 		});
+
 		it('all ST levels should have basic damage', function() {
 			Object.keys(attributes.ST).forEach(function (element) {
 				attributes.ST[element].should.have.ownProperty('basicDamage');
@@ -34,6 +42,10 @@ describe('attributes', function() {
 		});
 
 		describe('Weak', function() {
+			it("should have a base roll of 8", function() {
+					attributes.ST.weak.baseRoll.should.equal(8);
+			});
+
 			it("should have 8 HP", function() {
 				attributes.ST.weak.hitPoints.should.equal(8);
 			});
@@ -43,6 +55,10 @@ describe('attributes', function() {
 		});
 
 		describe('Normal', function() {
+			it("should have a base roll of 10", function() {
+					attributes.ST.normal.baseRoll.should.equal(10);
+			});
+
 			it("should have 10 HP", function() {
 				attributes.ST.normal.hitPoints.should.equal(10);
 			});
@@ -52,6 +68,10 @@ describe('attributes', function() {
 		});
 
 		describe('Strong', function() {
+			it("should have a base roll of 14", function() {
+					attributes.ST.strong.baseRoll.should.equal(14);
+			});
+
 			it("should have 14 HP", function() {
 				attributes.ST.strong.hitPoints.should.equal(14);
 			});
@@ -61,6 +81,10 @@ describe('attributes', function() {
 		});
 
 		describe('Very Strong', function() {
+			it("should have a base roll of 18", function() {
+					attributes.ST.veryStrong.baseRoll.should.equal(18);
+			});
+
 			it("should have 18 HP", function() {
 				attributes.ST.veryStrong.hitPoints.should.equal(18);
 			});
