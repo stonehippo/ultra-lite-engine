@@ -11,6 +11,9 @@ describe('utilities', function () {
     var characters = util.loadCharactersFromLocalFile(path.resolve("./example/characters.json"));
     characters.length.should.equal(2);
     var sirGodric = characters[0];
+    // this property is not in the file
+    // should be injected by the character creator
+    sirGodric.should.have.property("notes");
     sirGodric.levels.should.equal(4);
     sirGodric.attributes.ST.should.equal(ultralite.attributes.ST.strong);
   });
