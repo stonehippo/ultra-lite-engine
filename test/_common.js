@@ -8,6 +8,8 @@ sinonChai = require('sinon-chai');
 chai.should();
 chai.use(sinonChai);
 
+should = require('chai').should();
+
 // include Blanket.js code coverage, config is in package.json
 require('blanket');
 

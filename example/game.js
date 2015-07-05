@@ -1,38 +1,11 @@
 // A really simple example of a game session
-
+var path = require('path');
 ultralite = require("../lib/ultralite.js");
+var characters = ultralite.util.loadCharactersFromLocalFile(path.resolve("./example/characters.json"));
 
-var sirGodric = ultralite.character.create({
-  levels: 4,
-  attributes: {
-    ST: ultralite.attributes.ST.strong,
-    IQ: ultralite.attributes.IQ.normal,
-    DX: ultralite.attributes.DX.agile,
-    HT: ultralite.attributes.HT.hardy
-  },
-  skills: {
-    knight: {
-      level: 2,
-      description: "The medival skills of fighting and chivalry"
-    }
-  }
-});
+var sirGodric = ultralite.character.create(characters[0]);
 
-var lordDrakon = ultralite.character.create({
-  levels: 4,
-  attributes: {
-    ST: ultralite.attributes.ST.weak,
-    IQ: ultralite.attributes.IQ.genius,
-    DX: ultralite.attributes.DX.normal,
-    HT: ultralite.attributes.HT.normal
-  },
-  skills: {
-    sorcery: {
-      level: 3,
-      description: "The mystical power of innate magic"
-    }
-  }
-});
+var lordDrakon = ultralite.character.create(characters[1]);
 
 console.log(sirGodric, lordDrakon);
 
