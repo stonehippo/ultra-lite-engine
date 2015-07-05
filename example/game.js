@@ -3,6 +3,7 @@
 ultralite = require("../lib/ultralite.js");
 
 var sirGodric = ultralite.character.create({
+  levels: 4,
   attributes: {
     ST: ultralite.attributes.ST.strong,
     IQ: ultralite.attributes.IQ.normal,
@@ -18,6 +19,7 @@ var sirGodric = ultralite.character.create({
 });
 
 var lordDrakon = ultralite.character.create({
+  levels: 4,
   attributes: {
     ST: ultralite.attributes.ST.weak,
     IQ: ultralite.attributes.IQ.genius,

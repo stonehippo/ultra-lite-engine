@@ -19,6 +19,10 @@ describe('character', function() {
 			character.should.have.property('notes');
 			character.notes.should.be.a('string');
 		});
+		if("should have levels", function() {
+			character.should.have.property('levels');
+			character.levels.should.be.a('number');
+		});
 	});
 
 	describe('attributes', function() {
