@@ -4,5 +4,7 @@ describe('turn', function() {
     ultralite.turn.should.respondTo('create');
     var turn = ultralite.turn.create();
     turn.should.be.an('object');
+    turn.should.have.ownProperty("location");
+    turn.should.have.ownProperty("actions");
   });
 });
