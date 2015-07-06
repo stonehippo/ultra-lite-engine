@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/stonehippo/ultra-lite-engine.svg?branch=master)](https://travis-ci.org/stonehippo/ultra-lite-engine)
+
 # Ultra Lite Engine
 
 Ultra Lite Engine is a simple engine for driving roleplaying games. It is based on [GURPS Ultra-Lite](http://www.sjgames.com/gurps/books/ultra-lite/).
