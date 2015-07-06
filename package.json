@@ -1,6 +1,11 @@
 {
   "name": "ultra-lite-engine",
   "description": "an ultra-lite engine for roleplaying games",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stonehippo/ultra-lite-engine"
+  },
+  "license": "MIT",
   "version": "0.8.0",
   "dependencies": {},
   "devDependencies": {
@@ -15,5 +20,9 @@
   		"pattern": "lib/",
   		"data-cover-never": "node_modules"
   	}
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec",
+    "coverage": "./node_modules/.bin/mocha --require blanket -R html-cov"
   }
 }

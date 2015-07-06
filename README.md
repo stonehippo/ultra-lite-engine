@@ -11,13 +11,19 @@ Ultra Lite Engine is a standalone engine that handles the most basic tasks of de
 To run tests:
 
 ```
-$ mocha
+$ npm test
 ```
 
 To see test coverage with Blanket:
 
 ```
-$ mocha --require blanket -R html-cov > test_coverage.html
+$ npm run coverage > ultralight_coverage.html
+```
+
+Or do something like this to send it straight to a browser (in this case using the handy bcat utility):
+
+```
+$ npm run coverage | bcat
 ```
 
 # Playing a game
