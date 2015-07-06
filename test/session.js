@@ -29,7 +29,7 @@ describe('session', function() {
 
     session.addCharacters(characters);
     session.characters.length.should.be.equal(2);
-    session.characters[0].name.should.equal('sirGodric');
+    session.characters[0].name.should.equal('Sir Godric');
   });
   it("should be able to register a set of places");
   it("should be able to register a set of NPCs");

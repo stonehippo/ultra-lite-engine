@@ -1,6 +1,6 @@
 [
   {
-    "name": "sirGodric",
+    "name": "Sir Godric",
     "levels": 4,
     "attributes": {
       "ST": "ultralite.attributes.ST.strong",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "name": "lordDrakon",
+    "name": "Lord Drakon",
     "levels": 4,
     "attributes": {
       "ST": "ultralite.attributes.ST.weak",
