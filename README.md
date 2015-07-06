@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/stonehippo/ultra-lite-engine.svg?branch=master)](https://travis-ci.org/stonehippo/ultra-lite-engine)
-
 [ ![Codeship Status for stonehippo/ultra-lite-engine](https://codeship.com/projects/002a91a0-05c0-0133-7d75-265ba245c2c5/status?branch=master)](https://codeship.com/projects/89523)
 
 # Ultra Lite Engine
