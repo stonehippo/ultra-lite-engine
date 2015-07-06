@@ -1,6 +1,11 @@
 {
   "name": "ultra-lite-engine",
   "description": "an ultra-lite engine for roleplaying games",
+  "author": {
+    "name": "George White",
+    "email": "stonehippo@gmail.com",
+    "url": "https://github.com/stonehippo"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/stonehippo/ultra-lite-engine"
