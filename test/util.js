@@ -15,6 +15,6 @@ describe('utilities', function () {
     // should be injected by the character creator
     sirGodric.should.have.property("notes");
     sirGodric.levels.should.equal(4);
-    sirGodric.attributes.ST.should.equal(ultralite.attributes.ST.strong);
+    sirGodric.attributes.ST.should.equal(ultralite.character.attributeLevels.ST.strong);
   });
 });
