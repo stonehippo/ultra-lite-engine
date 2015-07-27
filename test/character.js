@@ -34,17 +34,13 @@ describe('character', function() {
 
 	describe('attributes', function() {
 		it("must have ST, DX, IQ, and HT attributes", function() {
-			character.should.have.ownProperty("attributes");
-			character.attributes.should.have.ownProperty("ST");
-			character.attributes.should.have.ownProperty("DX");
-			character.attributes.should.have.ownProperty("IQ");
-			character.attributes.should.have.ownProperty("HT");
+			character.should.have.ownProperty("attribute");
 		});
 		it("has Normal attribute levels by default", function() {
-			character.attributes.ST.should.equal(ultralite.attributeLevels.ST.normal);
-			character.attributes.DX.should.equal(ultralite.attributeLevels.DX.normal);
-			character.attributes.IQ.should.equal(ultralite.attributeLevels.IQ.normal);
-			character.attributes.HT.should.equal(ultralite.attributeLevels.HT.normal);
+			character.attribute("ST").should.equal(ultralite.attributeLevels.ST.normal);
+			character.attribute("DX").should.equal(ultralite.attributeLevels.DX.normal);
+			character.attribute("IQ").should.equal(ultralite.attributeLevels.IQ.normal);
+			character.attribute("HT").should.equal(ultralite.attributeLevels.HT.normal);
 		});
 		describe('validation', function() {
 			it("must only allow attributes to be set to defined levels");
@@ -86,8 +82,8 @@ describe('character', function() {
 			sirGodric.should.have.property("notes");
 			sirGodric.levels.should.equal(4);
 			// an attribute that was not included in the character definition
-			sirGodric.attributes.IQ.should.equal(ultralite.attributeLevels.IQ.normal);
-			sirGodric.attributes.ST.should.equal(ultralite.attributeLevels.ST.strong);
+			sirGodric.attribute("IQ").should.equal(ultralite.attributeLevels.IQ.normal);
+			sirGodric.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
 		});
 		it("should be able to load characters from JSON locally", function() {
 			ultralite.character.should.respondTo("loadCharactersFromLocalFile");
@@ -99,8 +95,8 @@ describe('character', function() {
 			sirGodric.should.have.property("notes");
 			sirGodric.levels.should.equal(4);
 			// an attribute that was not included in the character definition
-			sirGodric.attributes.IQ.should.equal(ultralite.attributeLevels.IQ.normal);
-			sirGodric.attributes.ST.should.equal(ultralite.attributeLevels.ST.strong);
+			sirGodric.attribute("IQ").should.equal(ultralite.attributeLevels.IQ.normal);
+			sirGodric.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
 		});
 	});
 });
