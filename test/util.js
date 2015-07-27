@@ -15,6 +15,8 @@ describe('utilities', function () {
     // should be injected by the character creator
     sirGodric.should.have.property("notes");
     sirGodric.levels.should.equal(4);
+    // an attribute that was not included in the character definition
+    sirGodric.attributes.IQ.should.equal(ultralite.character.attributeLevels.IQ.normal);
     sirGodric.attributes.ST.should.equal(ultralite.character.attributeLevels.ST.strong);
   });
 });

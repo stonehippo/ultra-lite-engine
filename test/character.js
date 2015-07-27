@@ -270,4 +270,32 @@ describe('character', function() {
 			character.should.have.ownProperty("advantages");
 		});
 	});
+
+	describe('creation', function() {
+		it("should allow for creation via a spec object", function() {
+			var spec = {
+		    "name": "Sir Godric",
+		    "levels": 4,
+		    "attributes": {
+					"ST": "ultralite.character.attributeLevels.ST.strong",
+		      "DX": "ultralite.character.attributeLevels.DX.agile",
+		      "HT": "ultralite.character.attributeLevels.HT.hardy"
+		    },
+		    "skills": {
+		      "knight": {
+		        "level": 2,
+		        "description": "The medival skills of fighting and chivalry"
+		      }
+		    }
+		  },
+			sirGodric = ultralite.character.create(spec);
+			// this property is not in the file
+			// should be injected by the character creator
+			sirGodric.should.have.property("notes");
+			sirGodric.levels.should.equal(4);
+			// an attribute that was not included in the character definition
+			sirGodric.attributes.IQ.should.equal(ultralite.character.attributeLevels.IQ.normal);
+			sirGodric.attributes.ST.should.equal(ultralite.character.attributeLevels.ST.strong);
+		});
+	});
 });

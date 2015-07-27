@@ -4,7 +4,6 @@
     "levels": 4,
     "attributes": {
       "ST": "ultralite.character.attributeLevels.ST.strong",
-      "IQ": "ultralite.character.attributeLevels.IQ.normal",
       "DX": "ultralite.character.attributeLevels.DX.agile",
       "HT": "ultralite.character.attributeLevels.HT.hardy"
     },
