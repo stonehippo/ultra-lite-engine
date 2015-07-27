@@ -283,9 +283,9 @@ describe('character', function() {
 		    "name": "Sir Godric",
 		    "levels": 4,
 		    "attributes": {
-					"ST": "ultralite.character.attributeLevels.ST.strong",
-		      "DX": "ultralite.character.attributeLevels.DX.agile",
-		      "HT": "ultralite.character.attributeLevels.HT.hardy"
+					"ST": ultralite.character.attributeLevels.ST.strong,
+		      "DX": ultralite.character.attributeLevels.DX.agile,
+		      "HT": ultralite.character.attributeLevels.HT.hardy
 		    },
 		    "skills": {
 		      "knight": {

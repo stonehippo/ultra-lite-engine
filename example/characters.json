@@ -3,9 +3,9 @@
     "name": "Sir Godric",
     "levels": 4,
     "attributes": {
-      "ST": "ultralite.character.attributeLevels.ST.strong",
-      "DX": "ultralite.character.attributeLevels.DX.agile",
-      "HT": "ultralite.character.attributeLevels.HT.hardy"
+      "ST": "strong",
+      "DX": "agile",
+      "HT": "hardy"
     },
     "skills": {
       "knight": {
@@ -18,10 +18,10 @@
     "name": "Lord Drakon",
     "levels": 4,
     "attributes": {
-      "ST": "ultralite.character.attributeLevels.ST.weak",
-      "IQ": "ultralite.character.attributeLevels.IQ.genius",
-      "DX": "ultralite.character.attributeLevels.DX.normal",
-      "HT": "ultralite.character.attributeLevels.HT.normal"
+      "ST": "weak",
+      "IQ": "genius",
+      "DX": "normal",
+      "HT": "normal"
     },
     "skills": {
       "sorcery": {
