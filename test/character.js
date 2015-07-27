@@ -43,7 +43,16 @@ describe('character', function() {
 			character.attribute("HT").should.equal(ultralite.attributeLevels.HT.normal);
 		});
 		describe('validation', function() {
-			it("must only allow attributes to be set to defined levels");
+			it("must only allow attributes to be set to defined levels", function() {
+				character.setAttribute("ST", ultralite.attributeLevels.ST.strong);
+				character.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
+				character.setAttribute("ST", ultralite.attributeLevels.ST.nope);
+				character.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
+				character.setAttribute("ST", 1);
+				character.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
+				character.setAttribute("ST", {});
+				character.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
+			});
 		});
 	});
 
@@ -72,7 +81,7 @@ describe('character', function() {
 		    "skills": {
 		      "knight": {
 		        "level": 2,
-		        "description": "The medival skills of fighting and chivalry"
+		        "description": "The medieval skills of fighting and chivalry"
 		      }
 		    }
 		  },
