@@ -1,3 +1,5 @@
+var path = require('path');
+
 describe('character', function() {
 
 	var character = ultralite.character.create({
@@ -223,6 +225,10 @@ describe('character', function() {
 		ultralite.character.should.respondTo('create');
 	});
 
+	it('should be able to load a character from file', function() {
+		ultralite.character.should.respondTo('loadCharactersFromLocalFile');
+	});
+
 	describe('basic information', function() {
 		it("must have a non-empty name", function() {
 			character.should.have.ownProperty('name', 'Jane Doe');
@@ -289,6 +295,19 @@ describe('character', function() {
 		    }
 		  },
 			sirGodric = ultralite.character.create(spec);
+			// this property is not in the file
+			// should be injected by the character creator
+			sirGodric.should.have.property("notes");
+			sirGodric.levels.should.equal(4);
+			// an attribute that was not included in the character definition
+			sirGodric.attributes.IQ.should.equal(ultralite.character.attributeLevels.IQ.normal);
+			sirGodric.attributes.ST.should.equal(ultralite.character.attributeLevels.ST.strong);
+		});
+		it("should be able to load characters from JSON locally", function() {
+			ultralite.character.should.respondTo("loadCharactersFromLocalFile");
+			var characters = ultralite.character.loadCharactersFromLocalFile(path.resolve("./example/characters.json"));
+			characters.length.should.equal(2);
+			var sirGodric = characters[0];
 			// this property is not in the file
 			// should be injected by the character creator
 			sirGodric.should.have.property("notes");

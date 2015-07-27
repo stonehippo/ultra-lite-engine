@@ -25,7 +25,7 @@ describe('session', function() {
     session.characters.should.to.be.an('array');
     session.characters.should.be.empty;
     session.should.respondTo("addCharacters");
-    var characters = ultralite.util.loadCharactersFromLocalFile(path.resolve("./example/characters.json"));
+    var characters = ultralite.character.loadCharactersFromLocalFile(path.resolve("./example/characters.json"));
 
     session.addCharacters(characters);
     session.characters.length.should.be.equal(2);
