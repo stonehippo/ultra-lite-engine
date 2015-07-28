@@ -22,10 +22,10 @@ To see test coverage with Blanket:
 $ npm run coverage > ultralight_coverage.html
 ```
 
-Or do something like this to send it straight to a browser (in this case using the handy bcat utility):
+Or do something like this to send it straight to a browser (in this case using the handy bcat utility and grep to remove the npm run header text):
 
 ```
-$ npm run coverage | bcat
+$ npm run coverage | grep -v "^>" | bcat
 ```
 
 # Playing a game
