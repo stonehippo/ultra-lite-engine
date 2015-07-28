@@ -35,23 +35,42 @@ describe('character', function() {
 	describe('attributes', function() {
 		it("must have ST, DX, IQ, and HT attributes", function() {
 			character.should.have.ownProperty("attribute");
+			character.should.have.ownProperty("attributeLevel");
 		});
 		it("has Normal attribute levels by default", function() {
-			character.attribute("ST").should.equal(ultralite.attributeLevels.ST.normal);
-			character.attribute("DX").should.equal(ultralite.attributeLevels.DX.normal);
-			character.attribute("IQ").should.equal(ultralite.attributeLevels.IQ.normal);
-			character.attribute("HT").should.equal(ultralite.attributeLevels.HT.normal);
+			character.attribute("ST").should.equal("normal");
+			character.attributeLevel("ST").should.equal(ultralite.attributeLevels.ST.normal);
+			character.attribute("DX").should.equal("normal");
+			character.attributeLevel("DX").should.equal(ultralite.attributeLevels.DX.normal);
+			character.attribute("IQ").should.equal("normal");
+			character.attributeLevel("IQ").should.equal(ultralite.attributeLevels.IQ.normal);
+			character.attribute("HT").should.equal("normal");
+			character.attributeLevel("HT").should.equal(ultralite.attributeLevels.HT.normal);
+		});
+		it ("should be able to set attribute with a direct reference to attribute", function() {
+			character.setAttributeLevel("IQ", ultralite.attributeLevels.IQ.smart);
+			character.attributeLevel("IQ").should.equal(ultralite.attributeLevels.IQ.smart);
+			character.attribute("IQ").should.equal("smart");
+		});
+		it ("should be able to set attribute with a attribute level key", function() {
+			character.setAttribute("DX", "clumsy");
+			character.attributeLevel("DX").should.equal(ultralite.attributeLevels.DX.clumsy);
+			character.attribute("DX").should.equal("clumsy");
 		});
 		describe('validation', function() {
 			it("must only allow attributes to be set to defined levels", function() {
-				character.setAttribute("ST", ultralite.attributeLevels.ST.strong);
-				character.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
-				character.setAttribute("ST", ultralite.attributeLevels.ST.nope);
-				character.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
-				character.setAttribute("ST", 1);
-				character.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
-				character.setAttribute("ST", {});
-				character.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
+				character.setAttributeLevel("ST", ultralite.attributeLevels.ST.strong);
+				character.attributeLevel("ST").should.equal(ultralite.attributeLevels.ST.strong);
+				character.attribute("ST").should.equal("strong");
+				character.setAttributeLevel("ST", ultralite.attributeLevels.ST.nope);
+				character.attribute("ST").should.equal("strong");
+				character.attributeLevel("ST").should.equal(ultralite.attributeLevels.ST.strong);
+				character.setAttributeLevel("ST", 1);
+				character.attribute("ST").should.equal("strong");
+				character.attributeLevel("ST").should.equal(ultralite.attributeLevels.ST.strong);
+				character.setAttributeLevel("ST", {});
+				character.attribute("ST").should.equal("strong");
+				character.attributeLevel("ST").should.equal(ultralite.attributeLevels.ST.strong);
 			});
 		});
 	});
@@ -91,8 +110,8 @@ describe('character', function() {
 			sirGodric.should.have.property("notes");
 			sirGodric.levels.should.equal(4);
 			// an attribute that was not included in the character definition
-			sirGodric.attribute("IQ").should.equal(ultralite.attributeLevels.IQ.normal);
-			sirGodric.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
+			sirGodric.attributeLevel("IQ").should.equal(ultralite.attributeLevels.IQ.normal);
+			sirGodric.attributeLevel("ST").should.equal(ultralite.attributeLevels.ST.strong);
 		});
 		it("should be able to load characters from JSON locally", function() {
 			ultralite.character.should.respondTo("loadCharactersFromLocalFile");
@@ -104,8 +123,8 @@ describe('character', function() {
 			sirGodric.should.have.property("notes");
 			sirGodric.levels.should.equal(4);
 			// an attribute that was not included in the character definition
-			sirGodric.attribute("IQ").should.equal(ultralite.attributeLevels.IQ.normal);
-			sirGodric.attribute("ST").should.equal(ultralite.attributeLevels.ST.strong);
+			sirGodric.attributeLevel("IQ").should.equal(ultralite.attributeLevels.IQ.normal);
+			sirGodric.attributeLevel("ST").should.equal(ultralite.attributeLevels.ST.strong);
 		});
 	});
 });
