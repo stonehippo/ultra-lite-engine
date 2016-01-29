@@ -14,7 +14,7 @@
   "version": "0.8.0",
   "dependencies": {},
   "devDependencies": {
-    "blanket": "^1.1.6",
+    "blanket": "*",
     "chai": "*",
     "sinon": "*",
     "sinon-chai": "*",
