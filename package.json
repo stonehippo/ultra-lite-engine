@@ -22,7 +22,7 @@
   },
   "config": {
   	"blanket": {
-  		"pattern": "lib/",
+  		"pattern": ["lib/ultralite/"],
   		"data-cover-never": "node_modules"
   	}
   },
