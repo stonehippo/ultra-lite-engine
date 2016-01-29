@@ -1,5 +1,3 @@
-var ultralite = require('../lib/ultralite.js');
-
 describe('combat', function() {
 	describe('attack', function() {
 		it("should allow a character to attack");
