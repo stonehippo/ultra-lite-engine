@@ -30,10 +30,10 @@ $ npm run coverage | grep -v "^>" | bcat
 
 # Playing a game
 
-See `example/game.js` for a example of a game session. Tested using Node.js 0.12.*.
+See `example/game.js` for a example of a game session. Tested using Node.js 6.5.0.
 
 ```
-$ node example/game.js
+$ npm run game
 ```
 
 ## License

@@ -32,6 +32,7 @@
     }
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha -R spec",
+    "game": "babel-node example/game.js"
   }
 }
