@@ -18,7 +18,7 @@ describe('dice', function() {
 		var fn = function() {ultralite.dice.rollWithRange(0);};
 		fn.should.throw(/max value not specified/);
 	});
-	it("should require that the max argument is an integer great than min", function() {
+	it("should require that the max argument is an integer greater than min", function() {
 		var fn = function() {ultralite.dice.rollWithRange(1,2.1);};
 		fn.should.throw(/max value must be an integer/);
 		fn = function() {ultralite.dice.rollWithRange(2,1);};
