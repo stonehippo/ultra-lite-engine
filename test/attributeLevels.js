@@ -205,7 +205,7 @@ describe('attributes', function() {
       });
     });
 
-    describe('Vary Hardy', function() {
+    describe('Very Hardy', function() {
       it("should have a base roll of 18", function() {
         attributeLevels.HT.veryHardy.baseRoll.should.equal(18);
       });
