@@ -1,8 +1,8 @@
-var path = require('path');
+let path = require('path');
 
 describe('character', function() {
 
-	var character = ultralite.character.create({
+	let character = ultralite.character.create({
 		name: "Jane Doe"
 	});
 
@@ -89,7 +89,7 @@ describe('character', function() {
 
 	describe('creation', function() {
 		it("should allow for creation via a spec object", function() {
-			var spec = {
+			let spec = {
 		    "name": "Sir Godric",
 		    "levels": 4,
 		    "attributes": {
@@ -115,9 +115,9 @@ describe('character', function() {
 		});
 		it("should be able to load characters from JSON locally", function() {
 			ultralite.character.should.respondTo("loadCharactersFromLocalFile");
-			var characters = ultralite.character.loadCharactersFromLocalFile(path.resolve("./example/characters.json"));
+			let characters = ultralite.character.loadCharactersFromLocalFile(path.resolve("./example/characters.json"));
 			characters.length.should.equal(2);
-			var sirGodric = characters[0];
+			let sirGodric = characters[0];
 			// this property is not in the file
 			// should be injected by the character creator
 			sirGodric.should.have.property("notes");

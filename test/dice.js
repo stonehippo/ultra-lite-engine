@@ -9,17 +9,17 @@ describe('dice', function() {
 		ultralite.dice.rollWithRange.should.throw(/min value not specified/);
 	});
 	it("should require that the min range is an integer of at least 1", function() {
-		var fn = function() {ultralite.dice.rollWithRange(0,0);};
+		let fn = function() {ultralite.dice.rollWithRange(0,0);};
 		fn.should.throw(/min value must be <= 1/);
 		fn = function() {ultralite.dice.rollWithRange(1.1,0);};
 		fn.should.throw(/min value must be an integer/);
 	});
 	it("should require a maximum range argument", function() {
-		var fn = function() {ultralite.dice.rollWithRange(0);};
+		let fn = function() {ultralite.dice.rollWithRange(0);};
 		fn.should.throw(/max value not specified/);
 	});
 	it("should require that the max argument is an integer greater than min", function() {
-		var fn = function() {ultralite.dice.rollWithRange(1,2.1);};
+		let fn = function() {ultralite.dice.rollWithRange(1,2.1);};
 		fn.should.throw(/max value must be an integer/);
 		fn = function() {ultralite.dice.rollWithRange(2,1);};
 		fn.should.throw(/max must be greater than min/);

@@ -1,5 +1,5 @@
 describe('attributes', function() {
-  var attributeLevels = ultralite.attributeLevels;
+  let attributeLevels = ultralite.attributeLevels;
 
   it('should really exist', function() {
     attributeLevels.should.exist;

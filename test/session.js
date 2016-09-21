@@ -1,12 +1,12 @@
-var path = require('path');
+let path = require('path');
 
 describe('session', function() {
-  var session;
+  let session;
   beforeEach(function() {
     session = ultralite.session.create();
   });
 
-  var characters;
+  let characters;
   before(function() {
     characters = require('../example/characters.json');
   })
@@ -14,7 +14,7 @@ describe('session', function() {
   it("should be able to create a new session", function() {
     ultralite.session.should.exist;
     ultralite.session.should.respondTo('create');
-    var session = ultralite.session.create();
+    let session = ultralite.session.create();
     session.should.be.an('object');
     session.should.have.ownProperty('turns');
     session.turns.should.be.an('array');
@@ -25,7 +25,7 @@ describe('session', function() {
     session.characters.should.to.be.an('array');
     session.characters.should.be.empty;
     session.should.respondTo("addCharacters");
-    var characters = ultralite.character.loadCharactersFromLocalFile(path.resolve("./example/characters.json"));
+    let characters = ultralite.character.loadCharactersFromLocalFile(path.resolve("./example/characters.json"));
 
     session.addCharacters(characters);
     session.characters.length.should.be.equal(2);
@@ -52,7 +52,7 @@ describe('session', function() {
 
   it("should be able to start a new turn if the session is in progress ", function() {
     session.should.respondTo("nextTurn");
-    var turn = session.nextTurn(); // expect null, as session has not started
+    let turn = session.nextTurn(); // expect null, as session has not started
     should.not.exist(turn);
     session.start();
     turn = session.nextTurn();
@@ -60,14 +60,14 @@ describe('session', function() {
   });
 
   it("should take take an optional spec object for the new turn", function() {
-    var spec = {"location": "The Forest"};
+    let spec = {"location": "The Forest"};
     session.start();
-    var turn = session.nextTurn(spec);
+    let turn = session.nextTurn(spec);
     turn.location.should.equal("The Forest");
   });
 
   it("should be able to retrieve the current turn", function() {
-    var turn = session.currentTurn(); // expect null, as the session has not started
+    let turn = session.currentTurn(); // expect null, as the session has not started
     should.not.exist(turn);
     session.start();
     session.should.respondTo("currentTurn");
