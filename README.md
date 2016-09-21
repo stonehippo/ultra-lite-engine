@@ -16,7 +16,7 @@ To run tests:
 $ npm test
 ```
 
-To see test coverage with Blanket:
+<!-- To see test coverage with Blanket:
 
 ```
 $ npm run coverage > ultralight_coverage.html
@@ -26,9 +26,17 @@ Or do something like this to send it straight to a browser (in this case using t
 
 ```
 $ npm run coverage | grep -v "^>" | bcat
+``` -->
+
+## Build
+
+To build new dist files, transpiled to ES2105:
+
+```
+$ npm run build
 ```
 
-# Playing a game
+## Playing a game
 
 See `example/game.js` for a example of a game session. Tested using Node.js 6.5.0.
 

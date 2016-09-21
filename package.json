@@ -33,6 +33,9 @@
   },
   "scripts": {
     "test": "mocha -R spec",
+    "dist": "babel -o dist/ultralite.js lib",
+    "min": "babel -s --minified -o dist/ultralite.min.js lib ",
+    "build": "npm run dist && npm run min",
     "game": "babel-node example/game.js"
   }
 }
