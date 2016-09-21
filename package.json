@@ -18,7 +18,6 @@
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-register": "^6.14.0",
-    "blanket": "^1.2.3",
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
     "sinon": "^1.17.6",
@@ -33,7 +32,6 @@
     }
   },
   "scripts": {
-    "test": "mocha -R spec",
-    "coverage": "mocha -R html-cov"
+    "test": "mocha -R spec"
   }
 }
