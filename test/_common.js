@@ -11,4 +11,5 @@ chai.use(sinonChai);
 should = require('chai').should();
 
 // load the library itself
-global.ultralite = require('../lib/ultralite.js');
+import ultralite from '../lib/ultralite.js';
+global.ultralite = ultralite;
