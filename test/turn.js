@@ -1,10 +1,23 @@
-describe('turn', function() {
-  it("should be able to create a new turn", function() {
-    ultralite.turn.should.exist;
-    ultralite.turn.should.respondTo('create');
-    let turn = ultralite.turn.create();
-    turn.should.be.an('object');
-    turn.should.have.ownProperty("location");
-    turn.should.have.ownProperty("actions");
-  });
+import test from 'tape';
+import ultralite from '../lib/ultralite.js';
+
+test('--- turn module tests ---', assert => {
+    // Confirm the API of the module
+    ["create"].forEach(m => {
+        const actual = typeof ultralite.turn[m];
+        const expected = 'function';
+        assert.equal(actual, expected,
+            `turn module should have method ${m}`);
+    });
+
+    const actual = ultralite.turn.create();
+    const expected = {
+        location: '',
+        actions: []
+    }
+
+    assert.deepEqual(actual, expected,
+        "factory should create a new turn object");
+
+    assert.end();
 });

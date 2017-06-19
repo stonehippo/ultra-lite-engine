@@ -1,6 +1,12 @@
-describe('utilities', function () {
-  let util = ultralite.util;
-  it("should have a method for mapping properties from one object to another", function() {
-    util.should.respondTo("objectMap");
-  });
+import test from 'tape';
+import ultralite from '../lib/ultralite.js'
+
+test('--- util module tests ---', assert => {
+    const actual = typeof ultralite.util.objectMap;
+    const expected = 'function';
+
+    assert.equal(actual, expected,
+        'has a method to map properties from one object to another');
+    
+    assert.end();
 });
