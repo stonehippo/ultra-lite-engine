@@ -1,7 +1,12 @@
-describe('skill', function() {
-  it("should able to create a new skill", function() {
-    ultralite.skill.create.should.exist;
-    let skill = ultralite.skill.create({name: "Knight"});
-    skill.should.have.property("name");
-  });
+import test from 'tape';
+import ultralite from '../lib/ultralite.js';
+
+test('--- skill modules tests ---', assert => {
+    const actual = ultralite.skill.create({name: "Knight"});
+    const expected = {name: "Knight"};
+
+    assert.deepEqual(actual, expected,
+        'new skill "Knight" should have been created');
+    
+    assert.end();
 });
