@@ -30,7 +30,7 @@ $ npm run coverage | grep -v "^>" | bcat
 
 ## Build
 
-To build new dist files, transpiled to ES2105:
+To build new dist files, transpiled to ES2015:
 
 ```
 $ npm run build
