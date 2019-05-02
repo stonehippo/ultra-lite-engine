@@ -529,7 +529,7 @@ var _skill2 = _interopRequireDefault(_skill);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-require("babel-polyfill");
+require("@babel/polyfill");
 
 // export let util = myutil;
 // export let attributeLevels = myattributeLevels;
