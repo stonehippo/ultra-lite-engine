@@ -8,6 +8,16 @@ Ultra Lite Engine is a simple engine for driving roleplaying games. It is based 
 
 Ultra Lite Engine is a standalone engine that handles the most basic tasks of describing an RPG character's attributes and skills and provides a (very) simple engine for resolving tasks and combat. My goal was to provide a simple system that could be used as the basis for many types of games.
 
+## Dev Setup
+
+Ultra Lite Engine is built using JavaScript and Node.js. You will want to have `node >= 8.0.0`.
+
+```
+$ git clone https://github.com/stonehippo/ultra-lite-engine.git
+$ cd ultra-lite-engine
+$ npm install
+```
+
 ## Tests
 
 To run tests:
