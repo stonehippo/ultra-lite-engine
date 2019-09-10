@@ -70,4 +70,5 @@ describe('dice', function() {
 		let rolls = rollNtimes(1000000, d2);
 		console.log(rolls.reduce(reducer,{}));
 	});
+	it("should have a way to do dice + adds");
 });
