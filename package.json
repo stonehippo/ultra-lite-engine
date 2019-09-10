@@ -24,8 +24,8 @@
     "install": "^0.12.2",
     "mocha": "^6.2.0",
     "npm": "^6.11.3",
-    "sinon": "^1.17.6",
-    "sinon-chai": "^2.8.0"
+    "sinon": "^1.17.7",
+    "sinon-chai": "^2.14.0"
   },
   "config": {
     "blanket": {
