@@ -67,7 +67,7 @@ describe('dice', function() {
 	});
 	it("should return a normal distribution for multiple dice (check output manually!)", function() {
 		let d2 = () => ultralite.dice.rollWithDiceCountOf(2);
-		let rolls = rollNtimes(1000000, d2);
+		let rolls = rollNtimes(10000, d2);
 		console.log(rolls.reduce(reducer,{}));
 	});
 	it("should have a way to do dice + adds");
