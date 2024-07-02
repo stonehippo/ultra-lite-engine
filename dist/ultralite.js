@@ -5,8 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var advantage = {};
-var _default = advantage;
-exports["default"] = _default;
+var _default = exports["default"] = advantage;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -85,8 +84,7 @@ var attributeLevels = {
     }
   }
 };
-var _default = attributeLevels;
-exports["default"] = _default;
+var _default = exports["default"] = attributeLevels;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -95,8 +93,8 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _util = _interopRequireDefault(require("./util.js"));
 var _attributeLevels = _interopRequireDefault(require("./attributeLevels.js"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var character = {
   create: function create(spec) {
     var _attributes = {
@@ -180,8 +178,7 @@ var character = {
     });
   }
 };
-var _default = character;
-exports["default"] = _default;
+var _default = exports["default"] = character;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -195,8 +192,7 @@ var combat = {
     // determine damage to the target
   }
 };
-var _default = combat;
-exports["default"] = _default;
+var _default = exports["default"] = combat;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -218,8 +214,7 @@ var dice = {
     return this.rollWithRange(dice, dice * 6);
   }
 };
-var _default = dice;
-exports["default"] = _default;
+var _default = exports["default"] = dice;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -227,7 +222,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _character = _interopRequireDefault(require("./character.js"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 var npc = {
   create: function create(spec) {
     if (!spec) {
@@ -262,8 +257,7 @@ var npc = {
     return that;
   }
 };
-var _default = npc;
-exports["default"] = _default;
+var _default = exports["default"] = npc;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -271,7 +265,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _dice = _interopRequireDefault(require("./dice.js"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 var reaction = {
   roll: function roll() {
     return _dice["default"].rollWithDiceCountOf(3);
@@ -287,8 +281,7 @@ var reaction = {
     return npc.reaction();
   }
 };
-var _default = reaction;
-exports["default"] = _default;
+var _default = exports["default"] = reaction;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -296,7 +289,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _turn = _interopRequireDefault(require("./turn.js"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 var session = {
   state: {
     created: "created",
@@ -336,8 +329,7 @@ var session = {
     return that;
   }
 };
-var _default = session;
-exports["default"] = _default;
+var _default = exports["default"] = session;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -345,7 +337,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _util = _interopRequireDefault(require("./util.js"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 var skill = {
   create: function create(spec) {
     var that = {
@@ -357,8 +349,7 @@ var skill = {
     return that;
   }
 };
-var _default = skill;
-exports["default"] = _default;
+var _default = exports["default"] = skill;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -367,7 +358,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _dice = _interopRequireDefault(require("./dice.js"));
 var _util = _interopRequireDefault(require("./util.js"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 var task = {
   status: {
     "success": "success",
@@ -411,8 +402,7 @@ var task = {
     return _dice["default"].rollWithDiceCountOf(3);
   }
 };
-var _default = task;
-exports["default"] = _default;
+var _default = exports["default"] = task;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -420,7 +410,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _util = _interopRequireDefault(require("./util.js"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 var turn = {
   create: function create(spec) {
     var that = {
@@ -434,8 +424,7 @@ var turn = {
     return that;
   }
 };
-var _default = turn;
-exports["default"] = _default;
+var _default = exports["default"] = turn;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -450,14 +439,14 @@ var util = {
     });
   }
 };
-var _default = util;
-exports["default"] = _default;
+var _default = exports["default"] = util;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+require("core-js/stable");
 var _util = _interopRequireDefault(require("./ultralite/util.js"));
 var _attributeLevels = _interopRequireDefault(require("./ultralite/attributeLevels.js"));
 var _dice = _interopRequireDefault(require("./ultralite/dice.js"));
@@ -470,8 +459,7 @@ var _turn = _interopRequireDefault(require("./ultralite/turn.js"));
 var _session = _interopRequireDefault(require("./ultralite/session.js"));
 var _advantage = _interopRequireDefault(require("./ultralite/advantage.js"));
 var _skill = _interopRequireDefault(require("./ultralite/skill.js"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-require("@babel/polyfill");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 // export let util = myutil;
 // export let attributeLevels = myattributeLevels;
 // export let dice = mydice;
@@ -499,5 +487,4 @@ var ultralite = {
   advantage: _advantage["default"],
   skill: _skill["default"]
 };
-var _default = ultralite;
-exports["default"] = _default;
+var _default = exports["default"] = ultralite;
