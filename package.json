@@ -24,8 +24,8 @@
     "npm": "^10.8.1",
     "sinon": "^18.0.0",
     "sinon-chai": "^3.7.0",
-    "faucet": "0.0.1",
-    "tape": "^4.6.3"
+    "tape": "^5.8.1",
+    "faucet": "^0.0.4"
   },
   "config": {
     "blanket": {
