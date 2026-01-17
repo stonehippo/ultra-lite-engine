@@ -1,5 +1,5 @@
 describe('non-player character', function() {
-	let npc = ultralite.npc.create();
+	const npc = ultralite.npc.create();
 
 	describe('reaction', function() {
 		it("must have a reaction level", function() {

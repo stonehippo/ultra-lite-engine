@@ -1,8 +1,8 @@
-let path = require('path');
+import path from "node:path";
 
 describe('character', function() {
 
-	let character = ultralite.character.create({
+	const character = ultralite.character.create({
 		name: "Jane Doe"
 	});
 

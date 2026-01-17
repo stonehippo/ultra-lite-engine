@@ -1,15 +1,15 @@
 // Common stuff needed by all tests
 
 // chai for assertions, sinon for spies/mocks/stubs
-global.chai = require('chai');
-global.sinon = require('sinon');
-let sinonChai = require('sinon-chai');
+// deno-lint-ignore-file no-unused-vars
+import { use, should as loadShould } from "chai";
+import sinon from "sinon";
+import sinonChai from 'sinon-chai';
 
-chai.should();
-chai.use(sinonChai);
-
-should = require('chai').should();
+globalThis.sinon = sinon;
+globalThis.should = loadShould();
+use(sinonChai);
 
 // load the library itself
 import ultralite from '../lib/ultralite.js';
-global.ultralite = ultralite;
+globalThis.ultralite = ultralite;

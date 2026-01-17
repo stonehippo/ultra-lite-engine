@@ -1,5 +1,6 @@
 {
   "name": "ultra-lite-engine",
+  "type": "module",
   "description": "an ultra-lite engine for roleplaying games",
   "author": {
     "name": "George White",
@@ -13,16 +14,16 @@
   "license": "MIT",
   "version": "0.8.0",
   "devDependencies": {
-    "@babel/cli": "^7.24.7",
-    "@babel/core": "^7.24.7",
-    "@babel/node": "^7.24.7",
-    "@babel/preset-env": "^7.24.7",
-    "@babel/register": "^7.24.6",
-    "chai": "^4.4.1",
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.28.6",
+    "@babel/node": "^7.28.6",
+    "@babel/preset-env": "^7.28.6",
+    "@babel/register": "^7.28.6",
+    "chai": "^4.5.0",
     "install": "^0.13.0",
-    "mocha": "^10.6.0",
-    "npm": "^10.8.1",
-    "sinon": "^18.0.0",
+    "mocha": "^10.8.2",
+    "npm": "^10.9.4",
+    "sinon": "^18.0.1",
     "sinon-chai": "^3.7.0"
   },
   "config": {

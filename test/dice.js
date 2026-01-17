@@ -15,7 +15,7 @@ describe('dice', function() {
 		fn.should.throw(/min value must be an integer/);
 	});
 	it("should require a maximum range argument", function() {
-		let fn = function() {ultralite.dice.rollWithRange(0);};
+		const fn = function() {ultralite.dice.rollWithRange(0);};
 		fn.should.throw(/max value not specified/);
 	});
 	it("should require that the max argument is an integer greater than min", function() {

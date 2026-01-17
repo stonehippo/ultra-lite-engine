@@ -1,6 +1,6 @@
 describe('utilities', function () {
-  let util = ultralite.util;
+  // const util = ultralite.util;
   it("should have a method for mapping properties from one object to another", function() {
-    util.should.respondTo("objectMap");
+    ultralite.util.should.respondTo("objectMap");
   });
 });
