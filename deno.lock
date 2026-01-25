@@ -9,7 +9,7 @@
     "npm:chai@^4.5.0": "4.5.0",
     "npm:install@0.13": "0.13.0",
     "npm:mocha@^10.8.2": "10.8.2",
-    "npm:npm@^10.9.4": "10.9.4",
+    "npm:npm@^11.8.0": "11.8.0",
     "npm:sinon-chai@^3.7.0": "3.7.0_chai@4.5.0_sinon@18.0.1",
     "npm:sinon@^18.0.1": "18.0.1"
   },
@@ -1817,8 +1817,8 @@
     "normalize-path@3.0.0": {
       "integrity": "sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA=="
     },
-    "npm@10.9.4": {
-      "integrity": "sha512-OnUG836FwboQIbqtefDNlyR0gTHzIfwRfE3DuiNewBvnMnWEpB0VEXwBlFVgqpNzIgYo/MHh3d2Hel/pszapAA==",
+    "npm@11.8.0": {
+      "integrity": "sha512-n19sJeW+RGKdkHo8SCc5xhSwkKhQUFfZaFzSc+EsYXLjSqIV0tl72aDYQVuzVvfrbysGwdaQsNLNy58J10EBSQ==",
       "bin": true
     },
     "object-inspect@1.13.4": {
@@ -2426,7 +2426,7 @@
         "npm:chai@^4.5.0",
         "npm:install@0.13",
         "npm:mocha@^10.8.2",
-        "npm:npm@^10.9.4",
+        "npm:npm@^11.8.0",
         "npm:sinon-chai@^3.7.0",
         "npm:sinon@^18.0.1"
       ]
