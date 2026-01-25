@@ -1,8 +1,8 @@
-[ ![Codeship Status for stonehippo/ultra-lite-engine](https://codeship.com/projects/002a91a0-05c0-0133-7d75-265ba245c2c5/status?branch=master)](https://codeship.com/projects/89523)
-
 # Ultra Lite Engine
 
 Ultra Lite Engine is a simple engine for driving roleplaying games. It is based on [GURPS Ultra-Lite](http://www.sjgames.com/gurps/books/ultra-lite/).
+
+**Note: As of 1/25/2026, I have stopped any active development on this code.**
 
 ## What's it for?
 
